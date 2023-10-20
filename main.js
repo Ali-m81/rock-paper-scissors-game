@@ -19,15 +19,13 @@ let again   = document.querySelector('#again');
 let num   = document.querySelector('#num');
 let YTxt = document.querySelector('#y');
 let HTxt = document.querySelector('#h');
-let  computerSelection,PlayerSelection,WinCheck,EqualCheck,computerChoice,playerChoice,point = 0;
 let scissors ='images/icon-scissors.svg';
 let spoke ='images/icon-spock.svg';
 let paper ='images/icon-paper.svg';
 let rock ='images/icon-rock.svg';
 let lizard ='images/icon-lizard.svg';
-
+let  computerSelection,PlayerSelection,WinCheck,EqualCheck,computerChoice,playerChoice,point = 0;
         // create a variable in the ;ist of randomize
-console.log(playerChoice,computerChoice)
  let list = [
    scissors,
    spoke,
@@ -155,5 +153,4 @@ async function check(){
         point-=1;
         WinCheck = 0;
     }
-   console.log(playerChoice , computerChoice)
 };
