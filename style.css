@@ -1,0 +1,308 @@
+#check{
+    width: 94rem;
+}
+@font-face {
+    font-family: tt;
+    src: url(./fonts/Ubuntu-Regular.ttf);
+}
+
+body{
+    background-color: #1b2e4e;
+}
+button{
+    color: #fff;
+    font-family: tt;
+    position: absolute;
+    right: 6rem;
+    bottom: 3.5rem;
+    width: 9rem;
+    height: 3rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #1b2e4e;
+    cursor: pointer;
+}
+#law-game{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 34.7rem;
+    top: 8rem;
+    width: 26.5rem;
+    height: 32rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    opacity: 2;
+    z-index: 2;
+    opacity: 1;
+}
+#rules{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 22rem;
+    margin-left: 3rem;
+}
+#rules span{
+    font-size: 1.7rem;
+    color: #1b2e4e;
+    font-family: tt;
+    font-weight: bolder;
+   
+}
+#rules img{
+    cursor: pointer;
+
+}
+#rules-bonus{
+    margin: 2rem;
+}
+#main-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .3;
+    /* height: 53rem; */
+}
+#score-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    width: 46rem;
+    border-radius: 20px;
+    border: solid 2px #fff;
+}
+#score-num{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 11rem;
+    background-color: #fff;
+    border-radius: 12px;
+}
+#score-num span{
+    font-weight: bolder;
+    font-family: tt;
+}
+#txt{
+    color: #3147a4;
+   
+}
+#num{
+    font-size: 4rem;
+    color: #555368;
+}
+#select-rules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    background: url(images/bg-pentagon.svg) no-repeat;
+    width: 46rem;
+    height: 30rem;
+    width: 46rem;
+    background-size: 59%;
+    background-position: center;
+}
+#select-rules div{
+    display: flex;
+}
+#two,#three{
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+#two{
+    width: 28rem;
+    margin: 0;
+}
+.iteam , #your-picked , #house-picked{
+    display: flex;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#select-rules div img{
+    padding: 1rem;
+}
+#scissors{
+    border: solid 1rem #e89f0f;
+}
+#spock{
+    border: solid 1rem #40b8cd;   
+}
+#paper{
+    border: solid 1rem #4b66f1;
+}
+#rock{
+    border: solid 1rem #db3d5b;
+}
+#lizard{
+    border: solid 1rem #8751e2;
+}
+#game-start{
+    display: none;
+    position: relative;
+}
+#txt-game{
+    font-family: tt;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+#txt-game div{
+    transition: transform 0.5s;
+}
+#your-picked , #house-picked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    width: 9rem;
+    padding: 2rem;
+    transition: transform 0.5s;
+}
+#your-picked {
+    transform: translateX(0rem);
+}
+#house-picked{
+    background-color: #17223e;
+    transform: translateX(0rem);
+}
+#your-picked img , #house-picked img{
+    width: 7rem;
+    height: 8rem;
+}
+
+#house-picked img{
+    display: none;
+}
+#picked{
+    display: flex;
+    flex-direction: row;
+}
+#result{
+    position: relative;
+    left: 12rem;
+    font-size: 3rem;
+    bottom: -11rem;
+    color: #fff;
+    font-family: tt;
+}
+#lose{
+    display: none;
+}
+#lose , #win ,#equal{
+    position: absolute;
+    left: 0rem;
+    top: -4rem;
+    transform: rotatey(-90deg);
+    transition-duration: 3s ;
+    display: block;
+}
+#again{
+    
+    display: flex;
+    justify-content: center;
+    font-family: tt;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #fff;
+    color: black;
+    width: 11rem !important;
+    margin-top: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transform: rotatey(90deg);
+    transition-duration: 3s;
+}
+
+
+@media (min-width :360px) and (max-width :660px){
+    #score-line{
+        width: 19rem;
+    }
+    #score-num{
+        width: 6rem;
+        height: 6rem;
+    }
+    #icon-s img{
+        width: 6rem;
+    }
+    #select-rules{
+        width: 28rem;
+        height: 20rem;
+    }
+
+    #two , #three{
+        width: 19rem;
+    }
+    #select-rules div img{
+        padding: 0;
+    }
+    #score-num span{
+        margin-top: -.5rem;
+    }
+    button{
+        right: 8.5rem;
+        top: 35rem;
+    }
+    .iteam , .iteam img{
+        width: 2rem;
+        height: 2rem;
+    }
+    #law-game{
+        left: 0;
+        top: 0;
+        height: 52rem;
+    }
+    #your-picked{
+        left: -3.5rem;
+        width: 2rem;
+        height: 2rem;
+        
+
+    }
+    #house-picked{
+        left: 10rem !important;
+        width: 2rem;
+        height: 2rem;
+        
+    }
+    #house-picked img ,#your-picked img{
+        width: 4rem;
+        height: 4rem;
+    }
+    #txt-game{
+        font-size: 1.1rem;
+        width: 20rem;
+        margin-left: -1rem;
+    }
+    #result{
+        bottom: -15rem;
+        left: 3rem;
+    }
+
+
+
+
+
+}
+
+
+
