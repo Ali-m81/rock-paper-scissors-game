@@ -128,7 +128,7 @@ close.addEventListener('click' , ()=>{
 
 
             //   a function to check the result of the game
-async function check(){
+ function check(){
     playerChoice = PlayerSelection;
     computerChoice = computerSelection;
     if(playerChoice===scissors && computerChoice===paper||computerChoice===lizard){
