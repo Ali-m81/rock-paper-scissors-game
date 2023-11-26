@@ -127,30 +127,54 @@ close.addEventListener('click' , ()=>{
     
 
 
-            //   a function to check the result of the game
- function check(){
-    playerChoice = PlayerSelection;
-    computerChoice = computerSelection;
-    if(playerChoice===scissors && computerChoice===paper||computerChoice===lizard){
-        point+=1
-        WinCheck = 1;
-    }else if(playerChoice===rock && computerChoice===rock||computerChoice===scissors){
-        point+=1
-        WinCheck = 1;
-    }else if(playerChoice===paper && computerChoice===spoke||computerChoice===rock){
-        point+=1
-        WinCheck = 1;
-    }else if(playerChoice===rock && computerChoice===scissors||computerChoice===lizard){
-        point+=1
-        WinCheck = 1;
-    } else if(playerChoice===lizard && computerChoice===paper||computerChoice===spoke){
-        point+=1
-        WinCheck = 1;
-    }else if(playerChoice===computerChoice){
-        EqualCheck = true;
-        WinCheck = 3;
-    }else{
-        point-=1;
-        WinCheck = 0;
-    }
-};
+            //   a function to check the game
+function check() { 
+  playerChoice = PlayerSelection; 
+  computerChoice = computerSelection; 
+  if (playerChoice === scissors) { 
+    if (computerChoice === rock || computerChoice === spoke) { 
+      WinCheck = 0; 
+    } else if (computerChoice === paper || computerChoice === lizard) { 
+      point++; 
+      WinCheck = 1; 
+    } else { 
+      EqualCheck = true; 
+    } 
+  } else if (playerChoice === paper) { 
+    if (computerChoice === scissors || computerChoice === lizard) { 
+      WinCheck = 0; 
+    } else if (computerChoice === rock || computerChoice === spoke) { 
+      point++; 
+      WinCheck = 1; 
+    } else { 
+      EqualCheck = true; 
+    } 
+  } else if (playerChoice === rock) { 
+    if (computerChoice === paper || computerChoice === spoke) { 
+      WinCheck = 0; 
+    } else if (computerChoice === scissors || computerChoice === lizard) { 
+      point++; 
+      WinCheck = 1; 
+    } else { 
+      EqualCheck = true; 
+    } 
+  } else if (playerChoice === lizard) { 
+    if (computerChoice === rock || computerChoice === scissors) { 
+      WinCheck = 0; 
+    } else if (computerChoice === paper || computerChoice === spoke) { 
+      point++; 
+      WinCheck = 1; 
+    } else { 
+      EqualCheck = true; 
+    } 
+  } else if (playerChoice === spoke) { 
+    if (computerChoice === lizard || computerChoice === paper) { 
+      WinCheck = 0; 
+    } else if (computerChoice === scissors || computerChoice === rock) { 
+      point++; 
+      WinCheck = 1; 
+    } else { 
+      EqualCheck = true; 
+    } 
+  } 
+}
