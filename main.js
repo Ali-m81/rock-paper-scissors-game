@@ -137,7 +137,8 @@ function check() {
     } else if (computerChoice === paper || computerChoice === lizard) { 
       point++; 
       WinCheck = 1; 
-    } else { 
+    } else {
+      point--; 
       EqualCheck = true; 
     } 
   } else if (playerChoice === paper) { 
@@ -148,6 +149,7 @@ function check() {
       WinCheck = 1; 
     } else { 
       EqualCheck = true; 
+      point--;
     } 
   } else if (playerChoice === rock) { 
     if (computerChoice === paper || computerChoice === spoke) { 
@@ -156,7 +158,9 @@ function check() {
       point++; 
       WinCheck = 1; 
     } else { 
-      EqualCheck = true; 
+      EqualCheck = true;
+
+      point--; 
     } 
   } else if (playerChoice === lizard) { 
     if (computerChoice === rock || computerChoice === scissors) { 
@@ -166,6 +170,7 @@ function check() {
       WinCheck = 1; 
     } else { 
       EqualCheck = true; 
+      point--;
     } 
   } else if (playerChoice === spoke) { 
     if (computerChoice === lizard || computerChoice === paper) { 
@@ -174,7 +179,8 @@ function check() {
       point++; 
       WinCheck = 1; 
     } else { 
-      EqualCheck = true; 
+      EqualCheck = true;
+      point--; 
     } 
   } 
 }
