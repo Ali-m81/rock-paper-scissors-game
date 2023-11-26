@@ -138,49 +138,47 @@ function check() {
       point++; 
       WinCheck = 1; 
     } else {
-      point--; 
       EqualCheck = true; 
     } 
   } else if (playerChoice === paper) { 
     if (computerChoice === scissors || computerChoice === lizard) { 
       WinCheck = 0; 
+point--; 
     } else if (computerChoice === rock || computerChoice === spoke) { 
       point++; 
       WinCheck = 1; 
     } else { 
-      EqualCheck = true; 
-      point--;
+      EqualCheck = true;
     } 
   } else if (playerChoice === rock) { 
     if (computerChoice === paper || computerChoice === spoke) { 
       WinCheck = 0; 
+point--; 
     } else if (computerChoice === scissors || computerChoice === lizard) { 
       point++; 
       WinCheck = 1; 
     } else { 
       EqualCheck = true;
-
-      point--; 
     } 
   } else if (playerChoice === lizard) { 
     if (computerChoice === rock || computerChoice === scissors) { 
       WinCheck = 0; 
+point--; 
     } else if (computerChoice === paper || computerChoice === spoke) { 
       point++; 
       WinCheck = 1; 
     } else { 
-      EqualCheck = true; 
-      point--;
+      EqualCheck = true;
     } 
   } else if (playerChoice === spoke) { 
     if (computerChoice === lizard || computerChoice === paper) { 
       WinCheck = 0; 
+point--; 
     } else if (computerChoice === scissors || computerChoice === rock) { 
       point++; 
       WinCheck = 1; 
     } else { 
       EqualCheck = true;
-      point--; 
     } 
   } 
 }
