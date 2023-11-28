@@ -100,7 +100,8 @@ close.addEventListener('click' , ()=>{
             lose.style.transform = 'rotatey(0deg)';
             }
             again.style.transform = 'rotatey(0deg)';
-        }, 2000);
+      return; 
+ }, 2000);
                num.innerHTML = point;
                console.log(point)
             }, -2000);
